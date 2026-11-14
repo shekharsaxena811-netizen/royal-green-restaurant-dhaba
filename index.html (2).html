@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Green Restaurant & Dhaba | Authentic Taste in Sadikpur</title>
+    <meta name="description" content="Royal Green Restaurant & Dhaba - Authentic North Indian, Tandoori & Dhaba cuisine at MDR110W, Sadikpur, Uttar Pradesh. Call 091404 39344 for orders & table booking.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Playfair Display & Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind Custom Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        royal: {
+                            950: '#041f17',
+                            900: '#062c21',
+                            800: '#0a4232',
+                            700: '#0f5c46',
+                            600: '#157a5d',
+                        },
+                        gold: {
+                            300: '#f5d77f',
+                            400: '#e8c156',
+                            500: '#d4af37',
+                            600: '#b59124',
+                        },
+                        cream: {
+                            50: '#fdfbf7',
+                            100: '#f8f4ea',
+                            200: '#efe7d6',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Poppins"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-cream-50 text-stone-800 font-sans antialiased selection:bg-gold-500 selection:text-royal-950 pb-16 md:pb-0">
+
+    <!-- Top Quick Info Bar (Desktop) -->
+    <div class="hidden md:block bg-royal-950 text-cream-100 text-xs py-2.5 border-b border-royal-800">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center space-x-6">
+                <a href="https://www.google.com/maps/place/ROYAL+GREEN+RESTAURANT+%26+DHABA/@27.5355037,79.3755362,17z" target="_blank" rel="noopener noreferrer" class="hover:text-gold-400 transition flex items-center gap-2">
+                    <i class="fa-solid fa-location-dot text-gold-500"></i>
+                    <span>G9PG+663, MDR110W, Sadikpur, Uttar Pradesh 209502</span>
+                </a>
+                <span class="text-royal-700">|</span>
+                <span class="flex items-center gap-2">
+                    <i class="fa-regular fa-clock text-gold-500"></i>
+                    <span>Mon – Sun: 11:00 AM – 11:00 PM</span>
+                </span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="tel:+919140439344" class="hover:text-gold-400 transition font-medium flex items-center gap-2">
+                    <i class="fa-solid fa-phone text-gold-500"></i>
+                    <span>+91 91404 39344</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Sticky Navigation -->
+    <header class="sticky top-0 z-40 bg-royal-900/95 backdrop-blur-md text-white shadow-lg border-b border-gold-500/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Brand Logo -->
+                <a href="#home" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center text-royal-950 shadow-md group-hover:scale-105 transition">
+                        <i class="fa-solid fa-utensils text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="block font-serif font-bold text-lg sm:text-xl tracking-wide text-gold-400 leading-tight">ROYAL GREEN</span>
+                        <span class="block text-[11px] sm:text-xs tracking-[0.2em] uppercase text-cream-200 font-medium">Restaurant & Dhaba</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a href="#home" class="text-cream-100 hover:text-gold-400 transition">Home</a>
+                    <a href="#about" class="text-cream-100 hover:text-gold-400 transition">About Us</a>
+                    <a href="#location" class="text-cream-100 hover:text-gold-400 transition">Google Maps</a>
+                    <a href="#contact" class="text-cream-100 hover:text-gold-400 transition">Book Table</a>
+                </nav>
+
+                <!-- Desktop Action Buttons -->
+                <div class="hidden md:flex items-center gap-3">
+                    <a href="tel:+919140439344" class="px-4 py-2.5 rounded-xl bg-royal-800 hover:bg-royal-700 border border-gold-500/40 text-gold-300 text-sm font-semibold transition flex items-center gap-2">
+                        <i class="fa-solid fa-phone-volume animate-pulse"></i>
+                        <span>091404 39344</span>
+                    </a>
+                    <a href="#contact" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-gold-500 to-gold-400 hover:from-gold-400 hover:to-gold-300 text-royal-950 text-sm font-bold shadow-md transition">
+                        Reserve Table
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <button id="mobile-menu-btn" aria-label="Toggle Menu" class="md:hidden p-2.5 rounded-xl bg-royal-800 text-gold-400 hover:bg-royal-700 transition">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-royal-950 border-t border-royal-800 px-4 pt-3 pb-6 space-y-2">
+            <a href="#home" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-cream-100 hover:bg-royal-800 hover:text-gold-400 font-medium">Home</a>
+            <a href="#about" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-cream-100 hover:bg-royal-800 hover:text-gold-400 font-medium">Why Royal Green</a>
+            <a href="#location" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-cream-100 hover:bg-royal-800 hover:text-gold-400 font-medium">Location & Google Maps</a>
+            <a href="#contact" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-cream-100 hover:bg-royal-800 hover:text-gold-400 font-medium">Table Booking & Contact</a>
+            <div class="pt-3 flex flex-col gap-2">
+                <a href="tel:+919140439344" class="w-full py-3 rounded-xl bg-gold-500 text-royal-950 font-bold text-center flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-phone"></i> Call: 091404 39344
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative bg-royal-950 text-white overflow-hidden">
+        <!-- Background Image with Rich Emerald Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=1920&q=80" 
+                 onerror="this.onerror=null;this.src='https://placehold.co/1920x1080/062c21/d4af37?text=Royal+Green+Restaurant+%26+Dhaba';" 
+                 alt="Authentic Indian Cuisine Feast" 
+                 class="w-full h-full object-cover object-center opacity-35">
+            <div class="absolute inset-0 bg-gradient-to-r from-royal-950 via-royal-950/90 to-royal-900/75"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
+            <div class="max-w-3xl">
+                <!-- Badge -->
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-royal-800/90 border border-gold-500/40 text-gold-300 text-xs sm:text-sm font-medium mb-6 shadow-sm">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                    <span>Open Daily • 11:00 AM – 11:00 PM • Sadikpur, UP</span>
+                </div>
+
+                <!-- Main Headline -->
+                <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-white mb-6">
+                    Shahi Swad &amp; Desi <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500">Dhaba Tadka</span> in Every Bite
+                </h1>
+
+                <!-- Subheadline -->
+                <p class="text-base sm:text-lg text-cream-200/90 leading-relaxed mb-8 max-w-2xl">
+                    Welcome to <strong class="text-gold-400 font-semibold">Royal Green Restaurant &amp; Dhaba</strong> on MDR110W, Sadikpur. Enjoy freshly prepared North Indian delicacies, smoky tandoori breads, rich paneer curries, and authentic highway dhaba hospitality with your family and friends.
+                </p>
+
+                <!-- Primary Call To Action Buttons -->
+                <div class="flex flex-wrap items-center gap-4">
+                    <a href="tel:+919140439344" class="px-7 py-4 rounded-2xl bg-gradient-to-r from-gold-500 to-gold-400 hover:from-gold-400 hover:to-gold-300 text-royal-950 font-bold text-base shadow-xl shadow-gold-500/20 transition transform hover:-translate-y-0.5 flex items-center gap-3">
+                        <i class="fa-solid fa-phone text-lg"></i>
+                        <span>Call Now: 091404 39344</span>
+                    </a>
+
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=27.5355037,79.3755362" target="_blank" rel="noopener noreferrer" class="px-7 py-4 rounded-2xl bg-royal-800/90 hover:bg-royal-700 text-white border border-gold-500/40 font-semibold text-base shadow-lg transition transform hover:-translate-y-0.5 flex items-center gap-3">
+                        <i class="fa-solid fa-location-arrow text-gold-400 text-lg"></i>
+                        <span>Get Google Directions</span>
+                    </a>
+                </div>
+
+                <!-- Quick Trust Strip -->
+                <div class="mt-12 pt-8 border-t border-royal-800/80 grid grid-cols-2 sm:grid-cols-3 gap-6">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-royal-800 flex items-center justify-center text-gold-400 shrink-0">
+                            <i class="fa-solid fa-fire-burner"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-white text-sm">Freshly Cooked</p>
+                            <p class="text-xs text-cream-200/70">100% Pure &amp; Hygienic</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-royal-800 flex items-center justify-center text-gold-400 shrink-0">
+                            <i class="fa-solid fa-people-roof"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-white text-sm">Family Seating</p>
+                            <p class="text-xs text-cream-200/70">Comfortable &amp; Spacious</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3 col-span-2 sm:col-span-1">
+                        <div class="w-10 h-10 rounded-xl bg-royal-800 flex items-center justify-center text-gold-400 shrink-0">
+                            <i class="fa-solid fa-square-parking"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-white text-sm">Easy Highway Access</p>
+                            <p class="text-xs text-cream-200/70">MDR110W, Sadikpur</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT & HIGHLIGHTS SECTION -->
+    <section id="about" class="py-16 sm:py-24 bg-cream-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <!-- Left Image Collage -->
+                <div class="lg:col-span-6 relative">
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=800&q=80" 
+                             onerror="this.onerror=null;this.src='https://placehold.co/600x700/0a4232/f5d77f?text=Shahi+Paneer';" 
+                             alt="Rich Paneer Curry" 
+                             class="rounded-3xl shadow-xl object-cover h-64 sm:h-80 w-full">
+                        <img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=800&q=80" 
+                             onerror="this.onerror=null;this.src='https://placehold.co/600x700/0f5c46/fdfbf7?text=Tandoori+Platter';" 
+                             alt="Tandoori Naan and Thali" 
+                             class="rounded-3xl shadow-xl object-cover h-64 sm:h-80 w-full mt-8">
+                    </div>
+                    <!-- Floating Experience Card -->
+                    <div class="absolute -bottom-5 left-1/2 -translate-x-1/2 sm:left-8 sm:translate-x-0 bg-royal-900 text-white px-6 py-4 rounded-2xl shadow-2xl border border-gold-500/40 flex items-center gap-4 w-max">
+                        <div class="w-12 h-12 rounded-xl bg-gold-500 text-royal-950 flex items-center justify-center font-serif font-bold text-2xl">
+                            <i class="fa-solid fa-crown"></i>
+                        </div>
+                        <div>
+                            <p class="font-serif font-bold text-gold-400 text-lg leading-tight">Royal Hospitality</p>
+                            <p class="text-xs text-cream-200">Trusted by Locals &amp; Travelers</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Content -->
+                <div class="lg:col-span-6 mt-6 lg:mt-0">
+                    <span class="text-royal-700 font-bold tracking-widest uppercase text-xs block mb-2">About Our Restaurant</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-royal-950 mb-5 leading-snug">
+                        Where Authentic Dhaba Warmth Meets Royal Dining Comfort
+                    </h2>
+                    <p class="text-stone-600 leading-relaxed mb-6">
+                        Located conveniently at <strong>G9PG+663, MDR110W, Sadikpur</strong>, <strong>Royal Green Restaurant &amp; Dhaba</strong> brings you the soul of traditional Indian cooking. Whether you are stopping by during a highway journey or planning a relaxed dinner with family, our chefs prepare every dish fresh to order using aromatic whole spices, farm-fresh vegetables, and pure dairy.
+                    </p>
+
+                    <div class="grid sm:grid-cols-2 gap-4 mb-8">
+                        <div class="p-4 rounded-2xl bg-white border border-cream-200 shadow-sm flex items-start gap-3">
+                            <i class="fa-solid fa-leaf text-royal-600 text-xl mt-0.5"></i>
+                            <div>
+                                <h3 class="font-bold text-royal-950 text-sm">Pure &amp; Fresh Ingredients</h3>
+                                <p class="text-xs text-stone-500 mt-1">Daily sourced fresh veggies, pure paneer, and authentic masalas.</p>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-white border border-cream-200 shadow-sm flex items-start gap-3">
+                            <i class="fa-solid fa-fire text-amber-600 text-xl mt-0.5"></i>
+                            <div>
+                                <h3 class="font-bold text-royal-950 text-sm">Live Clay Tandoor</h3>
+                                <p class="text-xs text-stone-500 mt-1">Piping hot Butter Naan, Tandoori Roti, and smoky starters.</p>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-white border border-cream-200 shadow-sm flex items-start gap-3">
+                            <i class="fa-solid fa-bag-shopping text-royal-600 text-xl mt-0.5"></i>
+                            <div>
+                                <h3 class="font-bold text-royal-950 text-sm">Dine-In &amp; Takeaway</h3>
+                                <p class="text-xs text-stone-500 mt-1">Call ahead at 091404 39344 for quick parcel pickup.</p>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-white border border-cream-200 shadow-sm flex items-start gap-3">
+                            <i class="fa-solid fa-indian-rupee-sign text-amber-600 text-xl mt-0.5"></i>
+                            <div>
+                                <h3 class="font-bold text-royal-950 text-sm">Pocket-Friendly Prices</h3>
+                                <p class="text-xs text-stone-500 mt-1">Generous dhaba portions at honest family-friendly rates.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-3">
+                        <a href="tel:+919140439344" class="px-6 py-3 rounded-xl bg-royal-900 hover:bg-royal-800 text-gold-400 font-semibold text-sm transition inline-flex items-center gap-2 shadow-md">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>Call for Quick Order</span>
+                        </a>
+                        <a href="#location" class="px-6 py-3 rounded-xl bg-cream-200 hover:bg-gold-400/30 text-royal-950 font-semibold text-sm transition inline-flex items-center gap-2">
+                            <i class="fa-solid fa-map-pin text-royal-700"></i>
+                            <span>View Map Location</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GOOGLE MAPS & LOCATION SECTION -->
+    <section id="location" class="py-16 sm:py-24 bg-cream-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-royal-700 font-bold tracking-widest uppercase text-xs block mb-2">Find Us Easily</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-royal-950 mb-3">Location &amp; Google Maps</h2>
+                <p class="text-stone-600 text-sm sm:text-base">
+                    Visit us directly at Sadikpur on MDR110W. Use the interactive Google Map below for live GPS navigation.
+                </p>
+            </div>
+
+            <div class="bg-white rounded-3xl shadow-xl border border-cream-200 overflow-hidden grid lg:grid-cols-12">
+                <!-- Address & Contact Details Column -->
+                <div class="lg:col-span-5 p-6 sm:p-10 bg-royal-950 text-white flex flex-col justify-between">
+                    <div>
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-royal-800 text-gold-400 text-xs font-semibold mb-4">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                            <span>Verified Google Maps Location</span>
+                        </div>
+                        <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white mb-6">Royal Green Restaurant &amp; Dhaba</h3>
+
+                        <div class="space-y-6">
+                            <!-- Address -->
+                            <div class="flex items-start gap-4">
+                                <div class="w-11 h-11 rounded-xl bg-royal-800 border border-gold-500/30 flex items-center justify-center text-gold-400 shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-location-dot text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gold-300 text-sm uppercase tracking-wider">Restaurant Address</h4>
+                                    <p class="text-cream-100 text-sm leading-relaxed mt-1">
+                                        G9PG+663, MDR110W,<br>
+                                        Sadikpur, Uttar Pradesh 209502
+                                    </p>
+                                    <button onclick="copyAddress()" class="mt-2 text-xs text-gold-400 hover:text-gold-300 underline flex items-center gap-1.5">
+                                        <i class="fa-regular fa-copy"></i>
+                                        <span id="copy-text">Copy Address</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Phone Number -->
+                            <div class="flex items-start gap-4">
+                                <div class="w-11 h-11 rounded-xl bg-royal-800 border border-gold-500/30 flex items-center justify-center text-gold-400 shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-phone-volume text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gold-300 text-sm uppercase tracking-wider">Contact Number</h4>
+                                    <a href="tel:+919140439344" class="text-xl font-bold text-white hover:text-gold-400 transition block mt-1">
+                                        091404 39344
+                                    </a>
+                                    <p class="text-xs text-cream-200/70 mt-0.5">Available for Orders, Parcel &amp; Table Enquiries</p>
+                                </div>
+                            </div>
+
+                            <!-- Opening Hours -->
+                            <div class="flex items-start gap-4">
+                                <div class="w-11 h-11 rounded-xl bg-royal-800 border border-gold-500/30 flex items-center justify-center text-gold-400 shrink-0 mt-0.5">
+                                    <i class="fa-regular fa-clock text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gold-300 text-sm uppercase tracking-wider">Opening Hours</h4>
+                                    <p class="text-cream-100 text-sm mt-1">Monday – Sunday (All 7 Days)</p>
+                                    <p class="text-emerald-400 font-semibold text-sm">11:00 AM – 11:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Google Maps Action Buttons -->
+                    <div class="mt-8 pt-6 border-t border-royal-800 flex flex-col sm:flex-row gap-3">
+                        <a href="https://www.google.com/maps/place/ROYAL+GREEN+RESTAURANT+%26+DHABA/@27.5355037,79.3755362,17z" target="_blank" rel="noopener noreferrer" class="flex-1 py-3.5 px-4 rounded-xl bg-gradient-to-r from-gold-500 to-gold-400 hover:from-gold-400 hover:to-gold-300 text-royal-950 font-bold text-sm text-center flex items-center justify-center gap-2 shadow-lg transition">
+                            <i class="fa-solid fa-diamond-turn-right text-base"></i>
+                            <span>Open in Google Maps</span>
+                        </a>
+                        <a href="tel:+919140439344" class="py-3.5 px-5 rounded-xl bg-royal-800 hover:bg-royal-700 border border-gold-500/40 text-white font-semibold text-sm text-center flex items-center justify-center gap-2 transition">
+                            <i class="fa-solid fa-phone text-gold-400"></i>
+                            <span>Call Now</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Interactive Embedded Google Map -->
+                <div class="lg:col-span-7 min-h-[380px] sm:min-h-[460px] relative bg-stone-200">
+                    <iframe 
+                        title="Royal Green Restaurant & Dhaba Google Map Location"
+                        src="https://maps.google.com/maps?q=27.5355037,79.3755362+(ROYAL%20GREEN%20RESTAURANT%20%26%20DHABA)&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                        class="w-full h-full border-0 min-h-[380px] sm:min-h-[460px]"
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TABLE RESERVATION & CONTACT SECTION -->
+    <section id="contact" class="py-16 sm:py-24 bg-cream-100 border-t border-cream-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-xl border border-cream-200 p-6 sm:p-10 lg:p-12">
+                <div class="grid md:grid-cols-12 gap-10 items-center">
+                    <!-- Left Info -->
+                    <div class="md:col-span-5">
+                        <span class="text-royal-700 font-bold tracking-widest uppercase text-xs block mb-2">Contact &amp; Booking</span>
+                        <h2 class="font-serif text-3xl font-bold text-royal-950 mb-4">Book a Table or Send an Enquiry</h2>
+                        <p class="text-stone-600 text-sm leading-relaxed mb-6">
+                            Reserve your table in advance for family gatherings, birthday celebrations, or group lunches. You can also call us directly anytime.
+                        </p>
+
+                        <div class="space-y-4">
+                            <a href="tel:+919140439344" class="p-4 rounded-2xl bg-royal-50 hover:bg-royal-100 border border-royal-200 flex items-center gap-4 transition group">
+                                <div class="w-12 h-12 rounded-xl bg-royal-900 text-gold-400 flex items-center justify-center text-lg group-hover:scale-105 transition">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-stone-500 block">Direct Call</span>
+                                    <span class="font-bold text-royal-950 text-lg">091404 39344</span>
+                                </div>
+                            </a>
+
+                            <a href="https://wa.me/919140439344?text=Hello%20Royal%20Green%20Restaurant%20%26%20Dhaba!%20I%20have%20an%20enquiry." target="_blank" rel="noopener noreferrer" class="p-4 rounded-2xl bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 flex items-center gap-4 transition group">
+                                <div class="w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center text-xl group-hover:scale-105 transition">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-stone-500 block">Chat on WhatsApp</span>
+                                    <span class="font-bold text-emerald-950 text-base">+91 91404 39344</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Reservation Form -->
+                    <div class="md:col-span-7">
+                        <form id="booking-form" class="space-y-4 bg-cream-50 p-6 sm:p-8 rounded-2xl border border-cream-200">
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="guest-name" class="block text-xs font-semibold text-royal-950 uppercase tracking-wider mb-1.5">Your Name *</label>
+                                    <input type="text" id="guest-name" required placeholder="e.g. Rahul Sharma" class="w-full px-4 py-3 rounded-xl bg-white border border-stone-300 focus:border-royal-700 focus:ring-2 focus:ring-royal-700/20 outline-none text-sm">
+                                </div>
+                                <div>
+                                    <label for="guest-phone" class="block text-xs font-semibold text-royal-950 uppercase tracking-wider mb-1.5">Mobile Number *</label>
+                                    <input type="tel" id="guest-phone" required placeholder="e.g. 98765 43210" class="w-full px-4 py-3 rounded-xl bg-white border border-stone-300 focus:border-royal-700 focus:ring-2 focus:ring-royal-700/20 outline-none text-sm">
+                                </div>
+                            </div>
+
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="guest-count" class="block text-xs font-semibold text-royal-950 uppercase tracking-wider mb-1.5">Number of Guests</label>
+                                    <select id="guest-count" class="w-full px-4 py-3 rounded-xl bg-white border border-stone-300 focus:border-royal-700 focus:ring-2 focus:ring-royal-700/20 outline-none text-sm">
+                                        <option value="2 Guests">2 Guests</option>
+                                        <option value="4 Guests" selected>4 Guests (Family)</option>
+                                        <option value="6 Guests">6 Guests</option>
+                                        <option value="8+ Guests">8+ Guests (Group)</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="visit-time" class="block text-xs font-semibold text-royal-950 uppercase tracking-wider mb-1.5">Preferred Time</label>
+                                    <select id="visit-time" class="w-full px-4 py-3 rounded-xl bg-white border border-stone-300 focus:border-royal-700 focus:ring-2 focus:ring-royal-700/20 outline-none text-sm">
+                                        <option value="Lunch (12:30 PM - 3:00 PM)">Lunch (12:30 PM – 3:00 PM)</option>
+                                        <option value="Evening Snacks (5:00 PM - 7:00 PM)">Evening Snacks (5:00 PM – 7:00 PM)</option>
+                                        <option value="Dinner (7:30 PM - 10:30 PM)" selected>Dinner (7:30 PM – 10:30 PM)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="guest-note" class="block text-xs font-semibold text-royal-950 uppercase tracking-wider mb-1.5">Special Request / Pre-Order (Optional)</label>
+                                <textarea id="guest-note" rows="2" placeholder="Any special dish or seating preference..." class="w-full px-4 py-3 rounded-xl bg-white border border-stone-300 focus:border-royal-700 focus:ring-2 focus:ring-royal-700/20 outline-none text-sm"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-royal-900 hover:bg-royal-800 text-gold-400 font-bold text-sm shadow-lg transition flex items-center justify-center gap-2">
+                                <i class="fa-brands fa-whatsapp text-lg text-emerald-400"></i>
+                                <span>Send Booking via WhatsApp</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-royal-950 text-cream-200 pt-14 pb-10 border-t border-royal-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-10 pb-10 border-b border-royal-800">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-gold-500 text-royal-950 flex items-center justify-center">
+                            <i class="fa-solid fa-utensils"></i>
+                        </div>
+                        <div>
+                            <span class="block font-serif font-bold text-lg text-gold-400 leading-none">ROYAL GREEN</span>
+                            <span class="block text-[11px] tracking-widest uppercase text-cream-200 mt-1">Restaurant &amp; Dhaba</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-cream-200/75 leading-relaxed">
+                        Serving authentic Indian flavors, hot tandoori breads, and warm dhaba hospitality in Sadikpur, Uttar Pradesh.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-serif font-bold text-white text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#home" class="hover:text-gold-400 transition">Home</a></li>
+                        <li><a href="#about" class="hover:text-gold-400 transition">About Us</a></li>
+                        <li></li>
+                        <li><a href="#location" class="hover:text-gold-400 transition">Google Maps Location</a></li>
+                        <li><a href="#contact" class="hover:text-gold-400 transition">Table Reservation</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-serif font-bold text-white text-lg mb-4">Visit &amp; Contact</h4>
+                    <p class="text-sm text-cream-200/80 mb-3 flex items-start gap-2.5">
+                        <i class="fa-solid fa-location-dot text-gold-400 mt-1"></i>
+                        <span>G9PG+663, MDR110W, Sadikpur, Uttar Pradesh 209502</span>
+                    </p>
+                    <p class="text-sm text-cream-200/80 mb-3 flex items-center gap-2.5">
+                        <i class="fa-solid fa-phone text-gold-400"></i>
+                        <a href="tel:+919140439344" class="hover:text-gold-400 font-semibold">091404 39344</a>
+                    </p>
+                    <p class="text-sm text-cream-200/80 flex items-center gap-2.5">
+                        <i class="fa-regular fa-clock text-gold-400"></i>
+                        <span>Mon – Sun: 11:00 AM – 11:00 PM</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="pt-6 text-center text-xs text-cream-200/60 flex flex-col sm:flex-row justify-between items-center gap-3">
+                <p>&copy; 2026 Royal Green Restaurant &amp; Dhaba. All Rights Reserved.</p>
+                <a href="https://www.google.com/maps/place/ROYAL+GREEN+RESTAURANT+%26+DHABA/@27.5355037,79.3755362,17z" target="_blank" rel="noopener noreferrer" class="text-gold-400 hover:underline">
+                    View on Google Maps &rarr;
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- STICKY MOBILE BOTTOM ACTION BAR (Easy One-Tap Call & Google Maps on Phones) -->
+    <div class="md:hidden fixed bottom-0 inset-x-0 z-50 bg-royal-950/95 backdrop-blur-md border-t border-gold-500/30 px-3 py-2.5 shadow-2xl">
+        <div class="grid grid-cols-2 gap-2.5">
+            <a href="tel:+919140439344" class="py-2.5 px-3 rounded-xl bg-gradient-to-r from-gold-500 to-gold-400 text-royal-950 font-bold text-sm flex items-center justify-center gap-2 shadow">
+                <i class="fa-solid fa-phone"></i>
+                <span>Call Now</span>
+            </a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=27.5355037,79.3755362" target="_blank" rel="noopener noreferrer" class="py-2.5 px-3 rounded-xl bg-royal-800 border border-gold-500/40 text-white font-semibold text-sm flex items-center justify-center gap-2 shadow">
+                <i class="fa-solid fa-location-dot text-gold-400"></i>
+                <span>Google Maps</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Custom Toast Notification Box (Replaces any browser alert) -->
+    <div id="toast-box" class="fixed top-24 right-4 z-50 hidden transform transition-all duration-300 bg-royal-900 text-white px-5 py-3.5 rounded-2xl shadow-2xl border border-gold-500/50 flex items-center gap-3 max-w-sm">
+        <i class="fa-solid fa-circle-check text-emerald-400 text-xl"></i>
+        <p id="toast-message" class="text-sm font-medium"></p>
+    </div>
+
+    <!-- Interactive JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Custom Toast Notification Helper
+        function showToast(msg) {
+            const toastBox = document.getElementById('toast-box');
+            const toastMsg = document.getElementById('toast-message');
+            toastMsg.textContent = msg;
+            toastBox.classList.remove('hidden');
+            setTimeout(() => {
+                toastBox.classList.add('hidden');
+            }, 3500);
+        }
+
+        // Copy Address Function
+        function copyAddress() {
+            const address = "ROYAL GREEN RESTAURANT & DHABA, G9PG+663, MDR110W, Sadikpur, Uttar Pradesh 209502";
+            const tempInput = document.createElement("textarea");
+            tempInput.value = address;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            try {
+                document.execCommand("copy");
+                document.getElementById("copy-text").textContent = "Address Copied!";
+                showToast("Restaurant address copied to clipboard!");
+                setTimeout(() => {
+                    document.getElementById("copy-text").textContent = "Copy Address";
+                }, 2500);
+            } catch (err) {
+                showToast("Address: G9PG+663, MDR110W, Sadikpur, UP");
+            }
+            document.body.removeChild(tempInput);
+        }
+
+        // Table Reservation WhatsApp Submission
+        document.getElementById('booking-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('guest-name').value.trim();
+            const phone = document.getElementById('guest-phone').value.trim();
+            const guests = document.getElementById('guest-count').value;
+            const time = document.getElementById('visit-time').value;
+            const note = document.getElementById('guest-note').value.trim();
+
+            const message = `*Table Reservation - Royal Green Restaurant & Dhaba*%0A` +
+                            `👤 *Name:* ${encodeURIComponent(name)}%0A` +
+                            `📞 *Phone:* ${encodeURIComponent(phone)}%0A` +
+                            `👨‍👩‍👧‍👦 *Guests:* ${encodeURIComponent(guests)}%0A` +
+                            `🕒 *Time:* ${encodeURIComponent(time)}%0A` +
+                            (note ? `📝 *Note:* ${encodeURIComponent(note)}` : ``);
+
+            showToast("Opening WhatsApp to confirm your table booking...");
+            window.open(`https://wa.me/919140439344?text=${message}`, '_blank', 'noopener,noreferrer');
+        });
+    </script>
+</body>
+</html>
